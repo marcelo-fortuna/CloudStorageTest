@@ -361,4 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/CloudStorageTest.API/appsettings.*.json
+/CloudStorageTest.API/appsettings*
