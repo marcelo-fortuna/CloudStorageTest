@@ -20,7 +20,7 @@ namespace CloudStorageTeste.Infrastructure.Storage
 
         public string Upload(IFormFile file, User user)
         {
-            var credential = new UserCredential(null, user.Email, new TokenResponse
+            var credential = new UserCredential(_googleAuthorizationCodeFlow, user.Email, new TokenResponse
             {
                 AccessToken = user.AccessToken,
                 RefreshToken = user.RefreshToken
@@ -39,7 +39,7 @@ namespace CloudStorageTeste.Infrastructure.Storage
             };
 
             var command = service.Files.Create(driveFile, file.OpenReadStream(), file.ContentType);
-            command.Fields = "Id";
+            command.Fields = "id";
 
             var response = command.Upload();
 
