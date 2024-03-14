@@ -1,4 +1,5 @@
-﻿using CloudStorageTest.Domain.Entities;
+﻿using CloudStorageTest.Application.UseCases.Users.UploadProfilePhoto;
+using CloudStorageTest.Domain.Entities;
 using CloudStorageTest.Domain.Storage;
 using FileTypeChecker.Extensions;
 using FileTypeChecker.Types;
@@ -6,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace CloudStorageTest.Application.UserCases.Users.UploadProfilePhoto
 {
-    public class UploadProfilePhotoUseCase
+    public class UploadProfilePhotoUseCase : IUploadProfilePhotoUseCase
     {
         private readonly IStorageService _storageService;
 
