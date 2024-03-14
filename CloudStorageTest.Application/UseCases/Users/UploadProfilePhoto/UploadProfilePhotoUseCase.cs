@@ -40,7 +40,9 @@ namespace CloudStorageTest.Application.UserCases.Users.UploadProfilePhoto
             {
                 Id = 1,
                 Name = "Marcelo",
-                Email = "celofortuna@gmail.com"
+                Email = "celofortuna@gmail.com",
+                RefreshToken = "https://developers.google.com/oauthplayground",
+                AccessToken = "https://developers.google.com/oauthplayground/"
             };
         }
     }
